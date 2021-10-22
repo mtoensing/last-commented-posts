@@ -1,0 +1,10 @@
+.wp-block-last-commented-posts li {
+    line-height: 1.1;
+    list-style: none;
+    margin-bottom: 1em;
+  }
+  
+ol.wp-block-last-commented-posts  {
+    margin: 0;
+    padding: 0;
+  }
