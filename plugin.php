@@ -102,7 +102,7 @@ function render_callback($attributes, $content) {
 function rcpb_plugin_meta( $links, $file ) {
 
   if ( false !== strpos( $file, 'recent-comments-block' ) ) {
-     $links = array_merge( $links, array( '<a href="https://marc.tv/out/donate">' . __( 'Donate', 'simpletoc' ) . '</a>' ) );
+     $links = array_merge( $links, array( '<a href="https://marc.tv/out/donate">' . __( 'Donate', 'rcpb' ) . '</a>' ) );
   }
 
   return $links;

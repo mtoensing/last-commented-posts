@@ -6,10 +6,10 @@ import { RangeControl } from '@wordpress/components';
 import { Panel, PanelBody, PanelRow } from '@wordpress/components';
 
 registerBlockType('rcpb/list', {
-  title: __('Recent Commented Posts', 'rcpb'),
+  title: __('Last Commented Posts', 'rcpb'),
   category: 'layout',
   icon: 'format-status',
-  keywords: [ __( 'RCPB' ), __( 'Latest Comments' ) ],
+  keywords: [ __( 'RCPB' ), __( 'Last Commented Posts' ),'Last Commented Posts' ],
   attributes: {
 		max_level: {
 			type: 'integer',
