@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: RCPB - Latest Commented Posts
- * Plugin URI: https://marc.tv/simpletoc-wordpress-inhaltsverzeichnis-plugin-gutenberg/
- * Description: Adds a lock that lists the latest commented articles.
- * Version: 4.8
+ * Plugin Name: Recent Commented Posts 
+ * Plugin URI: https://marc.tv/
+ * Description: Adds a block that lists the recent commented posts.
+ * Version: 0.9
  * Author: Marc Tönsing
  * Author URI: https://marc.tv
  * Text Domain: rcpb
@@ -15,8 +15,6 @@
 namespace RCPB;
 
 defined('ABSPATH') || exit;
-
-
 
 /**
   * Initalise frontend and backend and register block
@@ -41,9 +39,6 @@ function init() {
       array( ),
       filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
     );
-
-    // Allow inlining small stylesheets on the frontend if possible.
-    //wp_style_add_data ( 'rcpb-frontend', 'path', dirname( __FILE__ ) );
 
     wp_register_style(
       'rcpb-editor',
@@ -95,13 +90,9 @@ function render_callback($attributes, $content) {
     //add only if block is used in this post.
     add_filter('render_block', __NAMESPACE__ . '\\filter_block', 10, 2);
 
-    $post = get_post();
-    $blocks = parse_blocks($post->post_content);
-
     $query_result = query_posts_with_recent_comments($attributes['max_level']);
     format_last_commented_list($query_result);
 
-    $html = '<h2 class="simpletoc-title">' . __('Table of Contents', 'simpletoc') . '</h2>';
     $html = format_last_commented_list($query_result);
     
     return $html;
@@ -111,9 +102,7 @@ function render_callback($attributes, $content) {
 function rcpb_plugin_meta( $links, $file ) {
 
   if ( false !== strpos( $file, 'recent-comments-block' ) ) {
-    $links = array_merge( $links, array( '<a href="https://wordpress.org/support/plugin/simpletoc">' . __( 'Support', 'simpletoc' ) . '</a>' ) );
-    $links = array_merge( $links, array( '<a href="https://marc.tv/out/donate">' . __( 'Donate', 'simpletoc' ) . '</a>' ) );
-    $links = array_merge( $links, array( '<a href="https://wordpress.org/support/plugin/simpletoc/reviews/#new-post">' . __( 'Write a review', 'simpletoc' ) . '&nbsp;⭐️⭐️⭐️⭐️⭐️</a>' ) );
+     $links = array_merge( $links, array( '<a href="https://marc.tv/out/donate">' . __( 'Donate', 'simpletoc' ) . '</a>' ) );
   }
 
   return $links;
@@ -185,7 +174,7 @@ function query_posts_with_recent_comments($limit)
                 $authorname = substr($authorname, 0, 18) . '...';
             }
             
-            $comment_user = '<a href="' . $comment_url . '"><span class="comment-author-link">' .  get_the_title($result->ID) . '</span><br>' . $icon . $authorname . '</a>';
+            $comment_user = '<a href="' . $comment_url . '">' .  get_the_title($result->ID) . '<br><span class="comment-author-link">' . $icon . $authorname . '</span></a>';
 
             $html .= $comment_user;
 
