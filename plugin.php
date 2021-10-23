@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Recent Commented Posts 
+ * Plugin Name: Last Commented Posts 
  * Plugin URI: https://marc.tv/
  * Description: Adds a block that lists the recent commented posts.
  * Version: 0.9
