@@ -40,13 +40,6 @@ function init() {
       filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
     );
 
-    wp_register_style(
-      'rcpb-editor',
-      plugins_url('editor.css', __FILE__),
-      array( 'wp-edit-blocks' ),
-      filemtime(plugin_dir_path(__FILE__) . 'editor.css')
-    );
-
     wp_set_script_translations('rcpb-js', 'rcpb');
 }
 
