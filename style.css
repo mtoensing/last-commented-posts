@@ -8,3 +8,13 @@ ol.wp-block-last-commented-posts  {
     margin: 0;
     padding: 0;
   }
+
+.wp-block-last-commented-posts .comment-author-link {
+  color: #000;
+  font-weight: 300;
+  font-size: 85%;
+}
+
+.wp-block-last-commented-posts a {
+  font-weight: 700;
+}
