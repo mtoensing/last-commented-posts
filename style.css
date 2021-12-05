@@ -11,10 +11,10 @@ ol.wp-block-last-commented-posts  {
 
 .wp-block-last-commented-posts .comment-author-link {
   color: #000;
-  font-weight: 300;
+  font-weight: normal;
   font-size: 85%;
 }
 
 .wp-block-last-commented-posts a {
-  font-weight: 700;
+  font-weight: bold;
 }
