@@ -139,13 +139,13 @@ function query_posts_with_recent_comments($limit)
             //echo "<!-- Elapsed time is: ". (microtime(true) - $startTime) ." seconds -->";
             $authorname = $comment->comment_author;
 
-            $url = $comment_url;
+            $tag = 'a';
 
             if ($is_backend) {
-              $url = '#';
+              $tag = 'span';
             }
             
-            $comment_user = '<a href="' . $url . '">' .  get_the_title($result->ID) . '<br><span class="comment-author-link">' . $icon . $authorname . '</span></a>';
+            $comment_user = '<'.$tag.' href="' . $comment_url . '">' .  get_the_title($result->ID) . '<br><span class="comment-author-link">' . $icon . $authorname . '</span></'.$tag.'>';
 
             $html .= $comment_user;
 
