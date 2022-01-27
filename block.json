@@ -14,6 +14,10 @@
 			"default": 5
 		}
 	},
+	"supports": {
+		"align": [ "wide" , "full"]
+	},
 	"textdomain": "lastcommentedposts",
-	"editorScript": "file:./build/index.js"
+	"editorScript": "file:./build/index.js",
+	"style": "file:./build/style-index.css" 
 }

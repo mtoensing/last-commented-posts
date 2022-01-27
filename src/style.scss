@@ -17,4 +17,8 @@ ol.wp-block-last-commented-posts  {
 
 .wp-block-last-commented-posts a {
   font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }

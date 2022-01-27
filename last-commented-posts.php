@@ -3,7 +3,7 @@
  * Plugin Name: Last Commented Posts Block
  * Plugin URI: https://marc.tv/
  * Description: Adds a block that lists the recent commented posts.
- * Version: 1.4
+ * Version: 1.5
  * Author: Marc Tönsing
  * Author URI: https://marc.tv
  * Text Domain: rcpb
@@ -24,23 +24,7 @@ add_action('init', __NAMESPACE__ . '\\register_block');
 
 /* Init RCPB */
 function init() {
-    wp_register_script(
-      'rcpb-js',
-      plugins_url('build/index.js', __FILE__),
-      [ 'wp-i18n', 'wp-blocks', 'wp-editor', 'wp-element', 'wp-server-side-render'],
-      filemtime(plugin_dir_path(__FILE__) . 'build/index.js')
-    );
-
     add_filter('plugin_row_meta', __NAMESPACE__ . '\\rcpb_plugin_meta', 10, 2);
-
-    wp_register_style(
-      'rcpb-frontend',
-      plugins_url( 'style.css', __FILE__ ),
-      array( ),
-      filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
-    );
-
-    wp_set_script_translations('rcpb-js', 'rcpb');
 }
 
 
@@ -78,7 +62,7 @@ function render_callback($attributes, $content) {
 function rcpb_plugin_meta( $links, $file ) {
 
   if ( false !== strpos( $file, 'recent-comments-block' ) ) {
-     $links = array_merge( $links, array( '<a href="https://marc.tv/out/donate">' . __( 'Donate', 'rcpb' ) . '</a>' ) );
+     $links = array_merge( $links, array( '<a href="https://marc.tv/out/donate">' . __( 'Donate', 'lastcommentedposts' ) . '</a>' ) );
   }
 
   return $links;
