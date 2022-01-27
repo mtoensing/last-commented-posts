@@ -3,7 +3,7 @@
  * Plugin Name: Last Commented Posts Block
  * Plugin URI: https://marc.tv/
  * Description: Adds a block that lists the recent commented posts.
- * Version: 1.7
+ * Version: 1.8
  * Author: Marc Tönsing
  * Author URI: https://marc.tv
  * Text Domain: lastcommentedposts
