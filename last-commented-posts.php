@@ -51,28 +51,11 @@ function init() {
  */
 
 function register_block() {
-    if (! function_exists('register_block_type')) {
-        // Gutenberg is not active.
-        return;
-    }
-
-    register_block_type('rcpb/list', [
-    'editor_script' => 'rcpb-js',
-    'editor_style' => 'rcpb-editor',
-    'style' => 'rcpb-frontend',
-    'render_callback' => __NAMESPACE__ . '\\render_callback',
-    'attributes' => array(
-        'max_level' => array(
-          'type' => 'integer',
-          'default' => 5,
-        ),
-        'updated' => array(
-          'type' => 'number',
-          'default' => 0,
-          '_builtIn' => true,
-        ),
-    )]);
+  register_block_type(plugin_dir_path(__FILE__), [
+    'render_callback' => __NAMESPACE__ . '\\render_callback'
+  ]);
 }
+
 
 /**
  * Render block output 
