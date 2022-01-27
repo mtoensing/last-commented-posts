@@ -4,7 +4,7 @@ Tags: Gutenberg, block, comments,
 Requires at least: 5.0
 Donate link: https://marc.tv/out/donate
 Tested up to: 5.8
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,9 +23,10 @@ In Gutenberg, add a block and search for "Last Commented Posts". Please save you
 
 == Changelog ==
 
-= 1.3 = 
+= 1.6 = 
 new coding standards
-aligment options
+added aligment options
+localisation
 
 = 1.2 = 
 Name changed
