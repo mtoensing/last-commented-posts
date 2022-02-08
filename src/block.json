@@ -1,0 +1,24 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "lastcommentedposts/list",
+	"version": "1.9.0",
+	"title": "Last Commented Posts",
+	"category": "layout",
+	"keywords": [ "Last Commented", "Latest Comments", "Recent Comments" ],
+	"icon": "editor-ol",
+	"description": "Adds a block that lists the recent commented posts without duplicates.",
+	"attributes": {
+		"max_level": {
+			"type": "integer",
+			"default": 5
+		}
+	},
+	"supports": {
+		"align": [ "wide" , "full"]
+	},
+	"textdomain": "lastcommentedposts",
+	"editorScript": "file:index.js",
+	"style": "file:style-index.css",
+	"editorStyle": "file:index.css" 
+}
