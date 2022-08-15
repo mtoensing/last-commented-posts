@@ -1,7 +1,7 @@
 {
   "name": "lastcommentposts",
-  "version": "2.1.0",
-  "description": "",
+  "version": "2.2.0",
+  "description": "Adds a block that lists the recent commented posts without duplicates. ",
   "main": "src/index.js",
   "scripts": {
     "start": "wp-scripts start",

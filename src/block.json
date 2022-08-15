@@ -2,7 +2,7 @@
 	"$schema": "https://json.schemastore.org/block.json",
 	"apiVersion": 2,
 	"name": "lastcommentedposts/list",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"title": "Last Commented Posts",
 	"category": "layout",
 	"keywords": [ "Last Commented", "Latest Comments", "Recent Comments" ],
