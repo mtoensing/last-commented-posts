@@ -145,7 +145,7 @@ function query_posts_with_recent_comments($limit)
               $tag = 'span';
             }
             
-            $comment_user = '<'.$tag.' href="' . $comment_url . '">' .  get_the_title($result->ID) . '<br><span class="comment-author-link">' . $icon . $authorname . '</span></'.$tag.'>';
+            $comment_user = '<'.$tag.' href="' . $comment_url . '">' .  get_the_title($result->ID) . '</'.$tag.'><br><span class="comment-author-link">' . $icon . $authorname . '</span>';
 
             $html .= $comment_user;
 
