@@ -4,7 +4,8 @@ Tags: Gutenberg, block, comments,
 Requires at least: 5.9
 Donate link: https://marc.tv/out/donate
 Tested up to: 6.1
-Stable tag: 2.3
+Stable tag: 2.4
+Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +23,9 @@ Last Commented Posts can be found and installed via the Plugin menu within WordP
 In Gutenberg, add a block and search for "Last Commented Posts". Please save your content before you use the block.
 
 == Changelog ==
+
+= 2.4 =
+* removed SVG icon
 
 = 2.3 =
 * CSS fixes
