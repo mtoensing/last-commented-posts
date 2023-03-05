@@ -1,7 +1,8 @@
 .wp-block-last-commented-posts .comment-author-link {
-  font-weight: bold;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+	font-weight: 700;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }

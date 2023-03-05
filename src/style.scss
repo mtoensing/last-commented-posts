@@ -1,23 +1,24 @@
 .wp-block-last-commented-posts li {
-    line-height: 1.2;
-    list-style: none;
-    margin-bottom: 1em;
-  }
-  
-ol.wp-block-last-commented-posts  {
-    margin: 0;
-    padding: 0;
-  }
+	line-height: 1.2;
+	list-style: none;
+	margin-bottom: 1em;
+}
+
+ol.wp-block-last-commented-posts {
+	margin: 0;
+	padding: 0;
+}
 
 .wp-block-last-commented-posts .comment-author-link {
-  font-weight: normal;
-  font-size: 85%;
+	font-weight: 400;
+	font-size: 85%;
 }
 
 .wp-block-last-commented-posts a {
-  font-weight: bold;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+	font-weight: 700;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
