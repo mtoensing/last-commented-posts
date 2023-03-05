@@ -24,7 +24,8 @@ In Gutenberg, add a block and search for "Last Commented Posts". Please save you
 == Changelog ==
 
 = 2.3 =
-CSS fixes
+* CSS fixes
+* Excluded author name from link
 
 = 2.2 =
 Automatic deloyments using GitHub actions.
