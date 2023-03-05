@@ -16,7 +16,8 @@
     "lint-js:fix": "wp-scripts lint-js --fix",
     "lint-css": "wp-scripts lint-style",
     "lint-css:fix": "wp-scripts lint-style --fix",
-    "wp-env": "wp-env"
+    "wp-env": "wp-env",
+    "wp-int": "npm install @wordpress/scripts --save-dev --save-exact @wordpress/scripts"
   },
   "license": "GPL-2.0-or-later",
   "dependencies": {
