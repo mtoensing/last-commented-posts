@@ -24,6 +24,6 @@
   },
   "devDependencies": {
     "@wordpress/env": "^5.13.0",
-    "@wordpress/scripts": "^25.5.0"
+    "@wordpress/scripts": "25.5.0"
   }
 }
