@@ -1,16 +1,24 @@
 {
   "name": "lastcommentposts",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Adds a block that lists the recent commented posts without duplicates. ",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "scripts": {
-    "start": "wp-scripts start",
-    "build": "wp-scripts build",
-    "packages-update": "wp-scripts packages-update"
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"check-engines": "wp-scripts check-engines",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"up": "wp-scripts packages-update",
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"lint-js": "wp-scripts lint-js",
+		"lint-js:fix": "wp-scripts lint-js --fix",
+		"lint-css": "wp-scripts lint-style",
+		"lint-css:fix": "wp-scripts lint-style --fix",
+		"wp-env": "wp-env"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "GPL-2.0-or-later",
   "dependencies": {
     "@wordpress/block-editor": "^9.7.0",
     "@wordpress/blocks": "^11.14.0",

@@ -3,8 +3,8 @@ Contributors: MarcDK
 Tags: Gutenberg, block, comments, 
 Requires at least: 5.9
 Donate link: https://marc.tv/out/donate
-Tested up to: 5.9
-Stable tag: 2.2
+Tested up to: 6.1
+Stable tag: 2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,9 @@ Last Commented Posts can be found and installed via the Plugin menu within WordP
 In Gutenberg, add a block and search for "Last Commented Posts". Please save your content before you use the block.
 
 == Changelog ==
+
+= 2.3 =
+CSS fixes
 
 = 2.2 =
 Automatic deloyments using GitHub actions.
