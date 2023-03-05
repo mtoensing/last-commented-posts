@@ -1,6 +1,6 @@
 {
   "name": "lastcommentposts",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Adds a block that lists the recent commented posts without duplicates. ",
   "main": "build/index.js",
   "scripts": {
