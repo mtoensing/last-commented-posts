@@ -4,28 +4,26 @@
   "description": "Adds a block that lists the recent commented posts without duplicates. ",
   "main": "build/index.js",
   "scripts": {
-		"format": "wp-scripts format",
-		"lint:css": "wp-scripts lint-style",
-		"check-engines": "wp-scripts check-engines",
-		"lint:js": "wp-scripts lint-js",
-		"packages-update": "wp-scripts packages-update",
-		"up": "wp-scripts packages-update",
-		"build": "wp-scripts build",
-		"start": "wp-scripts start",
-		"lint-js": "wp-scripts lint-js",
-		"lint-js:fix": "wp-scripts lint-js --fix",
-		"lint-css": "wp-scripts lint-style",
-		"lint-css:fix": "wp-scripts lint-style --fix",
-		"wp-env": "wp-env"
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "check-engines": "wp-scripts check-engines",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "up": "wp-scripts packages-update",
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint-js": "wp-scripts lint-js",
+    "lint-js:fix": "wp-scripts lint-js --fix",
+    "lint-css": "wp-scripts lint-style",
+    "lint-css:fix": "wp-scripts lint-style --fix",
+    "wp-env": "wp-env"
   },
   "license": "GPL-2.0-or-later",
   "dependencies": {
-    "@wordpress/block-editor": "^9.7.0",
-    "@wordpress/blocks": "^11.14.0",
-    "@wordpress/i18n": "^4.15.0",
-    "markdown-it": "^12.3.2"
+    "@wordpress/i18n": "^4.28.0"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^23.7.1"
+    "@wordpress/env": "^5.13.0",
+    "@wordpress/scripts": "^25.5.0"
   }
 }
