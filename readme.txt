@@ -3,8 +3,8 @@ Contributors: MarcDK
 Tags: Gutenberg, block, comments, 
 Requires at least: 5.9
 Donate link: https://marc.tv/out/donate
-Tested up to: 6.1
-Stable tag: 2.6
+Tested up to: 6.4
+Stable tag: 2.7
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,6 +24,8 @@ In Gutenberg, add a block and search for "Last Commented Posts". Please save you
 
 == Changelog ==
 
+= 2.7 = 
+* Removed deprecated filter
 
 = 2.6 =
 * better coding standards

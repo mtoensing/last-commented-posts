@@ -3,7 +3,7 @@
  * Plugin Name: Last Commented Posts Block
  * Plugin URI: https://marc.tv/
  * Description: Adds a block that lists the recent commented posts.
- * Version: 2.6
+ * Version: 2.7
  * Author: Marc Tönsing
  * Author URI: https://marc.tv
  * Text Domain: lastcommentedposts
@@ -124,7 +124,7 @@ function query_posts_with_recent_comments($limit)
 
         $icon = '– ';
         
-        $is_backend = defined('REST_REQUEST') && true === REST_REQUEST && 'edit' === filter_input(INPUT_GET, 'context', FILTER_SANITIZE_STRING);
+        $is_backend = defined('REST_REQUEST') && true === REST_REQUEST && 'edit' === filter_input(INPUT_GET, 'context');
 
         $html = '<ol class="wp-block-last-commented-posts ' . $alignclass . ' ">';
 
