@@ -25,7 +25,8 @@ In Gutenberg, add a block and search for "Last Commented Posts". Please save you
 == Changelog ==
 
 = 2.7 = 
-* Removed deprecated filter
+* Tested with WordPress 6.4.
+* Removed deprecated filter function.
 
 = 2.6 =
 * better coding standards
