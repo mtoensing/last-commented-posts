@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name: Last Commented Posts Block
- * Plugin URI: https://marc.tv/
+ * Plugin URI:  https://marc.tv/
  * Description: Adds a block that lists the recent commented posts.
- * Version: 2.7
- * Author: Marc Tönsing
- * Author URI: https://marc.tv
+ * Version:     2.7
+ * Author:      Marc Tönsing
+ * Author URI:  https://toensing.com
  * Text Domain: lastcommentedposts
  * Domain Path: /languages
- * License: GPL v2 or later
+ * License:     GPL v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
