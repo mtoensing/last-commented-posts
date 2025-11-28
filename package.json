@@ -1,6 +1,6 @@
 {
   "name": "lastcommentposts",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "description": "Adds a block that lists the recent commented posts without duplicates. ",
   "main": "build/index.js",
   "scripts": {
@@ -21,10 +21,10 @@
   },
   "license": "GPL-2.0-or-later",
   "dependencies": {
-    "@wordpress/i18n": "^4.45.0"
+    "@wordpress/i18n": "^6.9.0"
   },
   "devDependencies": {
-    "@wordpress/env": "^8.11.0",
-    "@wordpress/scripts": "^26.16.0"
+    "@wordpress/env": "^10.36.0",
+    "@wordpress/scripts": "^31.1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "lastcommentedposts/list",
 	"version": "2.7.0",
 	"title": "Last Commented Posts",
