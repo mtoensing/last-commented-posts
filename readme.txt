@@ -3,7 +3,7 @@ Contributors: MarcDK
 Tags: Gutenberg, block, comments, 
 Requires at least: 5.9
 Donate link: https://marc.tv/out/donate
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 2.9.0
 Requires PHP: 7.0
 License: GPLv2 or later
