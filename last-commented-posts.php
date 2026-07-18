@@ -3,7 +3,7 @@
  * Plugin Name: Last Commented Posts Block
  * Plugin URI:  https://marc.tv/
  * Description: Adds a block that lists the recent commented posts.
- * Version:     2.9.1
+ * Version:     2.9.2
  * Author:      Marc Tönsing
  * Author URI:  https://toensing.com
  * Text Domain: lastcommentedposts
@@ -16,8 +16,8 @@ namespace RCPB;
 
 defined('ABSPATH') || exit;
 
-const PLUGIN_VERSION = '2.9.0';
-const CACHE_TTL = 15 * MINUTE_IN_SECONDS;
+const PLUGIN_VERSION = '2.9.2';
+const DEFAULT_CACHE_TTL = HOUR_IN_SECONDS;
 const CACHE_VERSION_OPTION = 'rcpb_cache_version';
 
 /**
@@ -64,11 +64,15 @@ function render_callback( $attributes, $content ) {
         $attributes,
         array(
             'max_level' => 5,
+            'cache_ttl' => DEFAULT_CACHE_TTL,
             'align' => '',
         )
     );
 
-    $results = get_recently_commented_posts( (int) $attributes['max_level'] );
+    $results = get_recently_commented_posts(
+        (int) $attributes['max_level'],
+        sanitize_cache_ttl( $attributes['cache_ttl'] )
+    );
 
     return format_last_commented_list( $results, $attributes );
 }
@@ -83,10 +87,11 @@ function rcpb_plugin_meta( $links, $file ) {
   return $links;
 }
 
-function get_recently_commented_posts( $limit ) {
+function get_recently_commented_posts( $limit, $cache_ttl = DEFAULT_CACHE_TTL ) {
     $limit = max( 1, min( 10, absint( $limit ) ) );
-    $cache_key = get_cache_key( $limit );
-    $cached_results = get_transient( $cache_key );
+    $cache_ttl = sanitize_cache_ttl( $cache_ttl );
+    $cache_key = get_cache_key( $limit, $cache_ttl );
+    $cached_results = 0 === $cache_ttl ? false : get_transient( $cache_key );
 
     if ( false !== $cached_results ) {
         return is_array( $cached_results ) ? $cached_results : array();
@@ -151,7 +156,9 @@ function get_recently_commented_posts( $limit ) {
         $offset += count( $comments );
     }
 
-    set_transient( $cache_key, $results, CACHE_TTL );
+    if ( 0 !== $cache_ttl ) {
+        set_transient( $cache_key, $results, $cache_ttl );
+    }
 
     return $results;
 }
@@ -188,8 +195,20 @@ function format_last_commented_list( $results, $attributes ) {
     return $html;
 }
 
-function get_cache_key( $limit ) {
-    return 'rcpb_' . str_replace( '.', '_', PLUGIN_VERSION ) . '_' . get_cache_version() . '_' . absint( $limit ) . '_' . ( is_editor_request() ? 'editor' : 'front' );
+function get_cache_key( $limit, $cache_ttl = DEFAULT_CACHE_TTL ) {
+    return 'rcpb_' . str_replace( '.', '_', PLUGIN_VERSION ) . '_' . get_cache_version() . '_' . absint( $limit ) . '_' . sanitize_cache_ttl( $cache_ttl ) . '_' . ( is_editor_request() ? 'editor' : 'front' );
+}
+
+function sanitize_cache_ttl( $cache_ttl ) {
+    $cache_ttl = absint( $cache_ttl );
+    $allowed_cache_ttls = array(
+        0,
+        HOUR_IN_SECONDS,
+        6 * HOUR_IN_SECONDS,
+        DAY_IN_SECONDS,
+    );
+
+    return in_array( $cache_ttl, $allowed_cache_ttls, true ) ? $cache_ttl : DEFAULT_CACHE_TTL;
 }
 
 function get_cache_version() {

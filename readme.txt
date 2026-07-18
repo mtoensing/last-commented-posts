@@ -4,12 +4,14 @@ Tags: Gutenberg, block, comments,
 Requires at least: 5.9
 Donate link: https://marc.tv/out/donate
 Tested up to: 7.0
-Stable tag: 2.9.1
+Stable tag: 2.9.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Adds a block that lists the recent commented posts without duplicates. 
+
+The block cache can be disabled or set to one hour, six hours, or one day. One hour is the default. The cache is invalidated immediately when comments or posts affecting the list change.
 
 == Description ==
 
@@ -23,6 +25,10 @@ Last Commented Posts can be found and installed via the Plugin menu within WordP
 In Gutenberg, add a block and search for "Last Commented Posts". Please save your content before you use the block.
 
 == Changelog ==
+= 2.9.2 =
+* Added a block setting to disable caching or cache the list for one hour, six hours, or one day.
+* Invalidates cached lists when relevant comments or posts change.
+
 = 2.9.1 =
 * Prepared release for WordPress 7.0 compatibility.
 
